@@ -9,7 +9,9 @@ cleansub:
 	$(MAKE) clean
 	rm -f $(TARGET).cue $(TARGET).bin
 	rm -f *.mcd *.frag *.lua *.vert
-	
+
+CPPFLAGS += -Iinclude -Ipsyq_include_what_you_use/include 
+
 SRCS = src/main.c \
 src/pad.c \
 src/math.c \
