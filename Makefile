@@ -10,7 +10,7 @@ cleansub:
 	rm -f $(TARGET).cue $(TARGET).bin
 	rm -f *.mcd *.frag *.lua *.vert
 
-CPPFLAGS += -Iinclude -Ipsyq/lib
+CPPFLAGS += -Iinclude -Ipsyq/include
 LDFLAGS += -Lpsyq/
 
 SRCS = src/main.c \
