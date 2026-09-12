@@ -3,14 +3,15 @@ TARGET = 3dcam
 .PHONY: all cleansub
 
 all:
-	mkpsxiso -y ./config/3dcam.xml
+	mkpsxiso -y 3dcam.xml
 
 cleansub:
 	$(MAKE) clean
 	rm -f $(TARGET).cue $(TARGET).bin
 	rm -f *.mcd *.frag *.lua *.vert
 
-CPPFLAGS += -Iinclude -Ipsyq_include_what_you_use/include 
+CPPFLAGS += -Iinclude -Ipsyq/lib
+LDFLAGS += -Lpsyq/
 
 SRCS = src/main.c \
 src/pad.c \
